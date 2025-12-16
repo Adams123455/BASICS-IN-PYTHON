@@ -46,32 +46,32 @@ while True:
 
             
 # Question 2
-service_charge = 15.00
-consumption_cost=0.0
-total_bill += consumption_cost
-
-
 consumption = float(input("Total water consumption for the month (in cubic meters): "))
 
-total_bill = service_charge
+service_charge = 15.00
+consumption_cost = 0.0
 
-
-if consumption >= 0 and consumption <= 15:
+if consumption <= 15:
     consumption_cost = consumption * 0.90
 
-elif consumption >= 16 and consumption <= 30:
-    consumption_cost = consumption * 1.20
+elif consumption <= 30:
+    consumption_cost = 15 * 0.90
+    consumption_cost += (consumption - 15) * 1.20
 
-elif consumption >= 31:
-    consumption_cost = consumption * 1.80
+else:
+    consumption_cost = 15 * 0.90
+    consumption_cost += 15 * 1.20
+    consumption_cost += (consumption - 30) * 1.80
 
-total_bill += consumption_cost
 
-print("\n--- Monthly Water Bill Summary ---")
-print(f"Consumption: {consumption} m3")
-print(f"Service Charge: GHS {service_charge:.2f}")
-print(f"Consumption Cost: GHS {consumption_cost:.2f}")
-print(f"Total Bill: GHS {total_bill:.2f}")
+total_bill = service_charge + consumption_cost
+
+print("--- Monthly Water Bill Summary ---")
+print(f"Consumption: {consumption} m³")
+print(f"Service Charge: GHS {round(service_charge, 2)}")
+print(f"Consumption Cost: GHS {round(consumption_cost, 2)}")
+print(f"Total Bill: GHS {round(total_bill, 2)}")
+
 
 
 
@@ -114,6 +114,7 @@ print(f"Average speed: {average_speed:.2f} km/h")
 focused_segment = recorded_speeds[2:8]  
 
 print(f"\nSpeeds for focused inspection segment (3rd to 8th vehicle): {focused_segment}")
+
 
 
 
