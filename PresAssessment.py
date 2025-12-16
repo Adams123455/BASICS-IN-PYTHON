@@ -96,8 +96,8 @@ total_violations = len(speeding_violations)
 
 
 speed_sum = 0
-for sp in recorded_speeds:
-    speed_sum += sp
+for current_speed in recorded_speeds:
+    speed_sum += current_speed
 
 average_speed = speed_sum / total_vehicles
 
@@ -114,5 +114,6 @@ print(f"Average speed: {average_speed:.2f} km/h")
 focused_segment = recorded_speeds[2:8]  
 
 print(f"\nSpeeds for focused inspection segment (3rd to 8th vehicle): {focused_segment}")
+
 
 
