@@ -47,8 +47,9 @@ while True:
             
 # Question 2
 service_charge = 15.00
+consumption_cost=0.0
 total_bill += consumption_cost
-service_charge = 15.00
+
 
 consumption = float(input("Total water consumption for the month (in cubic meters): "))
 
@@ -113,4 +114,5 @@ print(f"Average speed: {average_speed:.2f} km/h")
 focused_segment = recorded_speeds[2:8]  
 
 print(f"\nSpeeds for focused inspection segment (3rd to 8th vehicle): {focused_segment}")
+
 
