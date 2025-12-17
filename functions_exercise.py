@@ -109,7 +109,7 @@ while True:
         print(student_input)
         name, age, email, grade = student_input.split()
       
-        if grade == ['A','B','C'] :
+        if grade.Upper() in ['A','B','C'] :
             print(f"Congratulations {name}, you have been admitted to our school. Your profile is {student_profile(name, age, email, grade)}")
        
         else:
@@ -122,4 +122,5 @@ while True:
      
             
    
+
     
